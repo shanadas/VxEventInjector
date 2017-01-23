@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="VxEventInjector.Views.AgentSelectorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:prop="clr-namespace:VxEventInjector.Properties"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:views="clr-namespace:VxEventInjector.Views"
+             mc:Ignorable="d" x:ClassModifier="internal" Background="Black"
+             d:DesignHeight="191.222" d:DesignWidth="428.244">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCmd}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <ListView ItemsSource="{Binding AllAgents}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox>
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="Checked">
+                                            <i:InvokeCommandAction Command="{Binding DataContext.CheckedCmd, RelativeSource={RelativeSource AncestorType={x:Type views:AgentSelectorView}}}" CommandParameter="{Binding Id}" />
+                                        </i:EventTrigger>
+                                        <i:EventTrigger EventName="Unchecked">
+                                            <i:InvokeCommandAction Command="{Binding DataContext.UncheckedCmd, RelativeSource={RelativeSource AncestorType={x:Type views:AgentSelectorView}}}" CommandParameter="{Binding Id}" />
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </CheckBox>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="{x:Static prop:Resources.Name}" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="{x:Static prop:Resources.Manufacturer}" DisplayMemberBinding="{Binding Manufacturer}" />
+                    <GridViewColumn Header="{x:Static prop:Resources.Author}" DisplayMemberBinding="{Binding Author}" />
+                    <GridViewColumn Header="{x:Static prop:Resources.Version}" DisplayMemberBinding="{Binding Version}" />
+                    <GridViewColumn Header="{x:Static prop:Resources.Description}" DisplayMemberBinding="{Binding Description}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

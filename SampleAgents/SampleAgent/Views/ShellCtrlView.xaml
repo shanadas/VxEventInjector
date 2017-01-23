@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="SampleAgent.Views.ShellCtrlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" x:ClassModifier="internal"
+             d:DesignHeight="210" d:DesignWidth="352">
+    <UserControl.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF00BCF1" Offset="0"/>
+            <GradientStop Color="#FF97CB59" Offset="1"/>
+        </LinearGradientBrush>
+    </UserControl.Background>
+    <Grid Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBox Text="{Binding Name, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBlock Grid.Row="2" Text="{Binding Name}" Foreground="red" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="VxEventInjector.Views.ProcessAgentsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" x:ClassModifier="internal" Background="Black"
+             d:DesignHeight="256" d:DesignWidth="472">
+    <Border Background="Black">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="110" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="{Binding AgentName, Mode=OneWay}" Style="{StaticResource Headline2TextBlock}" />
+                <ProgressBar Grid.Row="1" Height="20" Value="{Binding AgentProgress, Mode=OneWay}" />
+                <TextBlock Grid.Row="3" Text="Total" Style="{StaticResource Headline2TextBlock}" />
+                <ProgressBar Grid.Row="4" Height="20" Value="{Binding TotalProgress, Mode=OneWay}" />
+            </Grid>
+            <ListBox Grid.Row="1" ItemsSource="{Binding MessageCollection}" Style="{StaticResource DarkListBox}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Message}" Foreground="{Binding Brush}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    </Border>
+</UserControl>

@@ -1,0 +1,18 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:region="clr-namespace:Prism.Regions;assembly=Prism.Wpf"
+        xmlns:prop="clr-namespace:VxEventInjector.Properties"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" x:Class="VxEventInjector.Shell" Icon="icon.ico"
+        Title="Event Agent Configurator" x:ClassModifier="internal" Background="Black"
+        d:DesignWidth="385.301" d:DesignHeight="266.142" Width="850" Height="500">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCmd}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <ContentControl region:RegionManager.RegionName="{x:Static prop:Resources.RegionShell}" />
+</Window>

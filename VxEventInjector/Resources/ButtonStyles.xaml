@@ -1,0 +1,77 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Reverse Button Style -->
+    <Style x:Key="ReverseButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Background" Value="{StaticResource ReverseButtonFillBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource ReverseButtonForegroundColor}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="8 2"/>
+        <Setter Property="FontSize" Value="{StaticResource BaseFontSize}" />
+        <Setter Property="FontFamily" Value="{StaticResource StandardFontFamily}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="{StaticResource ReverseButtonBorderBrush}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          RecognizesAccessKey="True"
+                                          Margin="{TemplateBinding Padding}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource ReverseButtonHoverFillBrush}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource ReverseButtonHoverBorderBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource ReverseButtonHoverForegroundColor}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{StaticResource ReverseButtonPressedFillBrush}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource ReverseButtonPressedBorderBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource ReverseButtonPressedForegroundColor}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="#ADADAD"/>
+                        </Trigger>
+                        <!--Keyboard Focus-->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsKeyboardFocused" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="{StaticResource HighlightedReverseButtonFillBrush}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource HighlightedReverseButtonBorderBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource HighlightedReverseButtonForegroundColor}"/>
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsKeyboardFocused" Value="True" />
+                                <Condition Property="IsMouseOver" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="{StaticResource HighlightedReverseButtonHoverFillBrush}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource HighlightedReverseButtonHoverBorderBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource HighlightedReverseButtonHoverForegroundColor}"/>
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsKeyboardFocused" Value="True" />
+                                <Condition Property="IsPressed" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="{StaticResource HighlightedReverseButtonPressedFillBrush}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource HighlightedReverseButtonPressedBorderBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource HighlightedReverseButtonPressedForegroundColor}"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLDIR">
+            <Component Id="cmpAAF37587D3AE8DA9F75730D5A543E097" Guid="{A3F78CCE-95AC-499B-811B-261681E38D18}">
+                <File Id="filD40F2CF25072B96CF41A5E1D8927F9E1" KeyPath="yes" Source="$(var.ReleaseDir)\cpprest120_2_6.dll" />
+            </Component>
+            <Component Id="cmpA12BA5B6D69CCFE317093D80E0B71C93" Guid="{B9F5A49D-559E-4075-8F57-2A8B3D1C4EA2}">
+                <File Id="fil49C2569F020AFF8D3B156745AC23758E" KeyPath="yes" Source="$(var.ReleaseDir)\Microsoft.Practices.Prism.Mvvm.Desktop.dll" />
+            </Component>
+            <Component Id="cmpD5C541B097A87A8A55C04CAFF483C6AC" Guid="{9CCE1D1C-B838-4971-B714-F287785478FF}">
+                <File Id="fil3D68DA3089621C96847C8480F53F1392" KeyPath="yes" Source="$(var.ReleaseDir)\Microsoft.Practices.Prism.Mvvm.dll" />
+            </Component>
+            <Component Id="cmpD50675EBA7B1CFF0585E539351FA99FC" Guid="{889C3C01-55A1-4F99-91BD-F9E3272280BF}">
+                <File Id="fil18DF2F7F73638E4DE72214C0300A0153" KeyPath="yes" Source="$(var.ReleaseDir)\Microsoft.Practices.Prism.SharedInterfaces.dll" />
+            </Component>
+            <Component Id="cmpA29C1A7B5910FFC929AFBBFEC3EA8129" Guid="{6D9A629C-9B53-4AE2-855F-4EE24BF58DA9}">
+                <File Id="filD651C3A8020C9B880EB84E0C130BF5F3" KeyPath="yes" Source="$(var.ReleaseDir)\Microsoft.Practices.ServiceLocation.dll" />
+            </Component>
+            <Component Id="cmpBADA0C60201E24F3EC586F2349DFA1B5" Guid="{15742B55-E911-43DD-BF29-6819D187E593}">
+                <File Id="filCE0D517BF07A59BC39D2AADA39DF52BD" KeyPath="yes" Source="$(var.ReleaseDir)\Microsoft.Practices.Unity.Configuration.dll" />
+            </Component>
+            <Component Id="cmp35F49CAFAC055E116A4C8FCB0F103E39" Guid="{AB7BF2F4-397C-4DA2-867C-23BE98100E1C}">
+                <File Id="filBD819CBD122DF9C5E579AF151DC00921" KeyPath="yes" Source="$(var.ReleaseDir)\Microsoft.Practices.Unity.dll" />
+            </Component>
+            <Component Id="cmp0669018F7B80873AC91E6991C29D3255" Guid="{822EE4C1-B04A-4EA0-9853-4562E9AB914C}">
+                <File Id="fil0918BAA4B89068D39B90CC66E4CCF0C5" KeyPath="yes" Source="$(var.ReleaseDir)\Microsoft.Practices.Unity.RegistrationByConvention.dll" />
+            </Component>
+            <Component Id="cmpEA47AF7A73489726CEF3454C1F5D158E" Guid="{A46DE12F-F58B-4C6D-BE83-267B7ACE17B7}">
+                <File Id="fil8FBC6819B509796C8F489A0A276CEAE3" KeyPath="yes" Source="$(var.ReleaseDir)\Pelco.AgentHosting.dll" />
+            </Component>
+            <Component Id="cmpC1F53D495463A5B567B6CFDAFFE9BC73" Guid="{5D623A6B-CCFA-4EF4-A39F-19D1F69A67E9}">
+                <File Id="fil64C8A77C71946B011A2FF6D335A2B85D" KeyPath="yes" Source="$(var.ReleaseDir)\Pelco.AgentProcess.exe" />
+            </Component>
+            <Component Id="cmpDDA2324923142CBB83F19F793F65C1AE" Guid="{FBC674E2-9A64-4D7D-B719-8D0DA56CBF38}">
+                <File Id="filEB1774B2D3F4160CE23B79ECA7C45B99" KeyPath="yes" Source="$(var.ReleaseDir)\Pelco.AgentProcess.exe.config" />
+            </Component>
+            <Component Id="cmp434C2B0BFBAD4CD9C9F7689A19609430" Guid="{86CCF8B8-ADE0-4AA5-8C0F-8EB29FBB3834}">
+                <File Id="fil5AAD95065FF782F83B81400285371A4E" KeyPath="yes" Source="$(var.ReleaseDir)\Pelco.AgentProcess64.exe" />
+            </Component>
+            <Component Id="cmpF3A0240D9A04F7964A980383E8CBD70E" Guid="{ABE552B0-5B37-498B-92A9-424593C7D9C0}">
+                <File Id="fil59618C2B2ACA8FBE4CF6B914044F13A1" KeyPath="yes" Source="$(var.ReleaseDir)\Pelco.AgentProcess64.exe.config" />
+            </Component>
+            <Component Id="cmpA2D1EC12AA086E37714C7C53277197E3" Guid="{D1C7799F-62C7-4B55-A805-3ECDAEE0AE4A}">
+                <File Id="fil435E3E28A91212DFEAB8BBCA08A32D9E" KeyPath="yes" Source="$(var.ReleaseDir)\Pelco.Helpers.dll" />
+            </Component>
+            <Component Id="cmpDF4B6BE65C60D16FD0326ADA7A8FB354" Guid="{8881545B-389F-40D9-ADC7-38435C3CE51F}">
+                <File Id="filAF2E70AD9CBC05AFEED328E9B2D41120" KeyPath="yes" Source="$(var.ReleaseDir)\Pelco.Logging.dll" />
+            </Component>
+            <Component Id="cmpDC8BEA6DCA934DE39D218B690BE1BEC8" Guid="{7145510F-19A8-47D1-8466-9B968AEF197B}">
+                <File Id="fil6106B755175585B70AA54DECB1870C0D" KeyPath="yes" Source="$(var.ReleaseDir)\Prism.dll" />
+            </Component>
+            <Component Id="cmp73E48400BCD41398EFCDA14C8C9B72BD" Guid="{D8D21AF9-38C4-49FC-99E9-265663D03144}">
+                <File Id="filEECF5FE2825A479C0D90247568C04B98" KeyPath="yes" Source="$(var.ReleaseDir)\Prism.Unity.Wpf.dll" />
+            </Component>
+            <Component Id="cmp0AF2313144B14F5156BB652898B3DA60" Guid="{B34E9A07-B56E-41C0-B60F-F10E0F21A64C}">
+                <File Id="filCDF7BEB0ABCE1126103799A55289E602" KeyPath="yes" Source="$(var.ReleaseDir)\Prism.Wpf.dll" />
+            </Component>
+            <Component Id="cmp4FE4E61EC9791201921745B40643CBB8" Guid="{B3E7202D-CD55-42B2-8FB0-2D956386893C}">
+                <File Id="fil6F11DE09547B0AE8405683CDB88F7FC4" KeyPath="yes" Source="$(var.ReleaseDir)\System.Windows.Interactivity.dll" />
+            </Component>
+            <Component Id="cmp853E81E953D4404DD409E84719F8A3F1" Guid="{DDB47868-CECC-49D6-A75C-FED1E2E47EE4}">
+                <File Id="fil0038AED82862CEED66F976D45599AC8C" KeyPath="yes" Source="$(var.ReleaseDir)\VxEventAgent.dll" />
+            </Component>
+            <Component Id="cmpCAF2501495B6252478182B8025868C78" Guid="{B50003C3-2176-4481-9E2B-E169E4D9BE08}">
+                <File Id="fil119E8C1D4BB7726FEFD50BB6B7EE453B" KeyPath="yes" Source="$(var.ReleaseDir)\VxEventInjector.exe" />
+            </Component>
+            <Component Id="cmpAA5E5986AC54B10820C13B8B38846DE7" Guid="{E65C9E63-1A68-49F1-A824-EB0646E0FF2F}">
+                <File Id="filACDF8F637FEEFD6D0394FD6BADDAAD22" KeyPath="yes" Source="$(var.ReleaseDir)\VxEventInjector.exe.config" />
+            </Component>
+            <Component Id="cmp229372AB41B61DBF3466BCAFD1D23A7B" Guid="{04577AC1-B06B-4C3C-9686-DF4AE40BD009}">
+                <File Id="fil7745821391E1D1BA56AB160548FA19EF" KeyPath="yes" Source="$(var.ReleaseDir)\VxEventInjectorCommon.dll" />
+            </Component>
+            <Component Id="cmpA41365EF718B687FF4E0C91C995563A8" Guid="{7BA04101-CA10-459C-8197-F43ABB9DC32B}">
+                <File Id="fil8271DDEE550B2A113F9DFAF72924290D" KeyPath="yes" Source="$(var.ReleaseDir)\VxEventInjectorSvc.exe" />
+            </Component>
+            <Component Id="cmpDD6D2C8CBA34F01E0F0C0E23D1D0616C" Guid="{9DCB3E25-E9CD-429E-A838-D8264F132BD5}">
+                <File Id="fil24D5030633FC15615CFC48E3A24EB3A1" KeyPath="yes" Source="$(var.ReleaseDir)\VxEventInjectorSvc.exe.config" />
+            </Component>
+            <Component Id="cmp3D994F272159FC15BDE2CC7CA56AF956" Guid="{4210A466-0040-4362-B7EC-B264C4C20E3F}">
+                <File Id="filC3F926B0248778ED7928C13BC4B0656D" KeyPath="yes" Source="$(var.ReleaseDir)\VxSdk.dll" />
+            </Component>
+            <Component Id="cmp9BEF9D9A802A64E35D7DC98692C97D81" Guid="{8C1C003D-AB0F-4995-8AD4-C7FC602221BD}">
+                <File Id="filBDF86077F806F56289984519907CC761" KeyPath="yes" Source="$(var.ReleaseDir)\VxSdkWrapper.dll" />
+            </Component>
+            <Directory Id="dir5C2B85E9A8DAA4B94B4503B66E2BB417" Name="Agents">
+                <Directory Id="dir7E4FE30DE33074EA839959605D9FACF2" Name="AgentLoader32">
+                    <Component Id="cmp2EB81750FC6A9C12A7AEF6D35D1A9DA0" Guid="{7530DD51-9396-44B2-B612-59714EE61A95}">
+                        <File Id="fil5AC8D3BBE17D4C38E357FA5DF4282EB2" KeyPath="yes" Source="$(var.ReleaseDir)\Agents\AgentLoader32\VxAgentLoader32.dll" />
+                    </Component>
+                    <Component Id="cmp2D1A49BC79EEF6CAACEAA01C27223FEA" Guid="{354DAFC4-74FB-4F48-B82D-B58387510CFF}">
+                        <File Id="fil7C45DB2BAE2BBC3C2E962255862393C6" KeyPath="yes" Source="$(var.ReleaseDir)\Agents\AgentLoader32\VxEventAgent.dll" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="AppGroup">
+            <ComponentRef Id="cmpAAF37587D3AE8DA9F75730D5A543E097" />
+            <ComponentRef Id="cmpA12BA5B6D69CCFE317093D80E0B71C93" />
+            <ComponentRef Id="cmpD5C541B097A87A8A55C04CAFF483C6AC" />
+            <ComponentRef Id="cmpD50675EBA7B1CFF0585E539351FA99FC" />
+            <ComponentRef Id="cmpA29C1A7B5910FFC929AFBBFEC3EA8129" />
+            <ComponentRef Id="cmpBADA0C60201E24F3EC586F2349DFA1B5" />
+            <ComponentRef Id="cmp35F49CAFAC055E116A4C8FCB0F103E39" />
+            <ComponentRef Id="cmp0669018F7B80873AC91E6991C29D3255" />
+            <ComponentRef Id="cmpEA47AF7A73489726CEF3454C1F5D158E" />
+            <ComponentRef Id="cmpC1F53D495463A5B567B6CFDAFFE9BC73" />
+            <ComponentRef Id="cmpDDA2324923142CBB83F19F793F65C1AE" />
+            <ComponentRef Id="cmp434C2B0BFBAD4CD9C9F7689A19609430" />
+            <ComponentRef Id="cmpF3A0240D9A04F7964A980383E8CBD70E" />
+            <ComponentRef Id="cmpA2D1EC12AA086E37714C7C53277197E3" />
+            <ComponentRef Id="cmpDF4B6BE65C60D16FD0326ADA7A8FB354" />
+            <ComponentRef Id="cmpDC8BEA6DCA934DE39D218B690BE1BEC8" />
+            <ComponentRef Id="cmp73E48400BCD41398EFCDA14C8C9B72BD" />
+            <ComponentRef Id="cmp0AF2313144B14F5156BB652898B3DA60" />
+            <ComponentRef Id="cmp4FE4E61EC9791201921745B40643CBB8" />
+            <ComponentRef Id="cmp853E81E953D4404DD409E84719F8A3F1" />
+            <ComponentRef Id="cmpCAF2501495B6252478182B8025868C78" />
+            <ComponentRef Id="cmpAA5E5986AC54B10820C13B8B38846DE7" />
+            <ComponentRef Id="cmp229372AB41B61DBF3466BCAFD1D23A7B" />
+            <ComponentRef Id="cmpA41365EF718B687FF4E0C91C995563A8" />
+            <ComponentRef Id="cmpDD6D2C8CBA34F01E0F0C0E23D1D0616C" />
+            <ComponentRef Id="cmp3D994F272159FC15BDE2CC7CA56AF956" />
+            <ComponentRef Id="cmp9BEF9D9A802A64E35D7DC98692C97D81" />
+            <ComponentRef Id="cmp2EB81750FC6A9C12A7AEF6D35D1A9DA0" />
+            <ComponentRef Id="cmp2D1A49BC79EEF6CAACEAA01C27223FEA" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

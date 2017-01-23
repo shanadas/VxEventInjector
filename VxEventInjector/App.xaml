@@ -1,0 +1,41 @@
+﻿<Application x:Class="VxEventInjector.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- 
+            These must be in a specific order: Resource dictionaries that are listed lower will not be accessible by higher up resource dictionaries. 
+            For example, Colors.xaml must be at the top of the list so the rest of the resource dictionaries can access its colors, etc...
+            -->
+                <!--<ResourceDictionary Source="Resources/Converters.xaml" />-->
+                <ResourceDictionary Source="Resources/Constants.xaml" />
+                <ResourceDictionary Source="Resources/Colors.xaml" />
+                <!-- SK: I specifically put UXGGlobalStyles here so it can't reference anything other than Constants.xaml. This way it is self-contained. -->
+                <ResourceDictionary Source="Resources/UXGGlobalStyles.xaml" />
+                <ResourceDictionary Source="Resources/Images.xaml" />
+                <ResourceDictionary Source="Resources/GlobalStyles.xaml" />
+                <!--<ResourceDictionary Source="Resources/GlobalScrollBarStyle.xaml" />-->
+                <ResourceDictionary Source="Resources/Styles.xaml" />
+                <!--<ResourceDictionary Source="Resources/CellStyles.xaml" />-->
+                <ResourceDictionary Source="Resources/ButtonStyles.xaml" />
+                <!--<ResourceDictionary Source="Resources/WindowTheme.xaml" />-->
+                <!--<ResourceDictionary Source="Resources/CloseButton.xaml" />-->
+                <!--<ResourceDictionary Source="Resources/ExpandableMenuStyle.xaml" />-->
+                <ResourceDictionary Source="Resources/LoginStyles.xaml" />
+                <!--<ResourceDictionary Source="Resources/EditableMenuItemControlStyle.xaml" />-->
+                <!--<ResourceDictionary Source="Resources/PopupMenuControlStyle.xaml" />-->
+                <!--<ResourceDictionary Source="Resources/TabTabControl.xaml" />-->
+                <!--<ResourceDictionary Source="Cell/Resources/Slider.xaml" />-->
+                <!--<ResourceDictionary Source="Resources/PopupButtonStyles.xaml" />-->
+                <ResourceDictionary Source="Resources/ComboBoxStyles.xaml" />
+                <!--<ResourceDictionary Source="Resources/TimelineControl.xaml" />-->
+                <ResourceDictionary Source="Resources/ProgressBarStyle.xaml" />
+                <!--<ResourceDictionary Source="Resources/ScreenArrangerStyle.xaml" />-->
+                <!--<ResourceDictionary Source="Resources/JumpToCalendarStyles.xaml" />-->
+                <!--<ResourceDictionary Source="Resources/JumpToDateTimeUpDownStyles.xaml" />-->
+                <!--<ResourceDictionary Source="Resources/MultiSelectFilterBoxStyle.xaml" />-->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
