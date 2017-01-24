@@ -10,6 +10,8 @@
 ### How do I install the latest build? ###
 
 * Install .NET 4.6.2
+* Install Visual Studio 2013 x86/x64 C++ runtime
+* Install Visual Studio 2015 x86/x64 C++ runtime
 * Install the Microsoft Message Queue (MSMQ) Server Core
 * No need to install...
 * ...MSMQ Active Directory Domain Services Integration
