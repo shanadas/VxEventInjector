@@ -24,6 +24,7 @@
 ### How do I build the repo ###
 
 * Install .NET 4.6.2
+* Install Visual Studio 2013 x86/x64 C++ runtime
 * Install Wix
 * Install Visual Studio 2015
 * Clone the repo
